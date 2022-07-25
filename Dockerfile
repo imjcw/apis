@@ -9,7 +9,7 @@ RUN apk --no-cache add git; \
     go build -ldflags '-s -w' -o app; \
     mkdir /tmp/scripts; \
     git clone https://github.com/imjcw/scripts.git /tmp/scripts; \
-    mv /tmp/scripts/scripts/files ./
+    mv /tmp/scripts/files ./
 
 FROM alpine:latest as prod
 
