@@ -20,4 +20,6 @@ WORKDIR /root/
 COPY --from=0 /go/src/github.com/imjcw/apis/app .
 COPY --from=0 /go/src/github.com/imjcw/apis/files files
 
+RUN ls -al
+
 CMD ["./app"]
