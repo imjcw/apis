@@ -18,8 +18,6 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 COPY --from=0 /go/src/github.com/imjcw/apis/app .
-COPY --from=0 /go/src/github.com/imjcw/apis/files .
-
-RUN ls -al
+COPY --from=0 /go/src/github.com/imjcw/apis/files files
 
 CMD ["./app"]
